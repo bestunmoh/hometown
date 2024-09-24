@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --primary : #536942,
+    --secondary : #ffd936,
+    -- white : #efefef,
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary);
+    
+}
+
+#main {
+    background-image: url(./img/cover.jpg) ;
+    min-height:70vh;
+    background-position: bottom center ;
+    background-size: cover ;
+   
+    
+   
+}
+
+a {
+    text-decoration: none ;
+}
+
+.container {
+
+    max-width: 1200px;
+    padding: 16px;
+    margin: auto;
+}
+
+section{
+    margin: 80px auto;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+    
+}
+
+.nav-list a{
+    color: var(--white);
+}
+
+.btn {
+    padding: 12px 20px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-secondary {
+    border: 2px solid var(--white);
+    color:var(--white);
+    font-weight: bold;
+    background: yellow;
+}
+
+.btn-primary{
+    border: none;
+    background:  yellow;
+    color: var(--primary);
+
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 80px;
+    color:  var(--white);   
+}
+
+.main-content .intro-heading {
+    font-size: 50px;
+
+}
+.main-content .heading-heading {
+    font-size: 110px;
+    margin-top: -20px;
+}
+
+.main-content p{
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    width: 30px;
+}
+
+.section-title h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-title .line{
+    width: 150px;
+    height: 40px;
+    border: 10px;
+    background: yellow var(secondary);
+    margin: auto;
+}
+.services {
+    margin-top:auto;
+    display: flex;
+    justify-self: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 350px;
+    
+}
+.service img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    width:1000px;
+   height:200px; 
+   
+}
+.service img:hover {
+    transform: scale(1.05);
+}
+
+#testmonial {
+    background: rgb(206, 240, 240);
+    
+}
+
+#testmonial .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    gap: 30px;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 16px;
+}
+
+#testmonial h1{
+    font-size: 100%;
+   font-size: large;
+   text-align: center;
+}
+
+
+#testmonial .ptrofile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-kurdistan .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+#about-kurdistan .container .about-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+#about-kurdistan .container .about-content h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+#questtions{
+    min-height: 400px;
+    background-image: url(./img/nawroz.jpg);
+    border-image: round;
+    background-position: bottom center;
+    background-size:cover;
+    color: rgb(5, 5, 36);
+}
+#questtions .container{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+}
+#questtions h1{
+    font-size: 50px;
+}
+
+footer{
+    margin-top: -60px;
+}
+footer .container{
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+}
+
+@media screen  and (max-width: 520px){
+    .menu-btn {
+        display: block;
+    }
+    .nav-list {
+        flex-direction:column;
+        background: grey;
+        position: absolute;
+        top: 0;
+        right: -900px;
+        width: 80%;
+        height: 100vh;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .nav-list.active{
+        right: 0;
+    }
+    .nav-list:not(:last-child) {
+        text-align: left;
+        width: 100%;
+        padding: 10px 30px ;
+        border-bottom: 1px solid var(--white);
+    }
+    about-kurdistan .container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .container {
+        flex-direction: column;
+        gap: 16;
+    }
+}
